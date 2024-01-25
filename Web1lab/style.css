@@ -1,0 +1,230 @@
+/* Общие стили */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-size: cover;
+    background: linear-gradient(180deg, rgb(255, 204, 0) 19%, rgb(253, 223, 29) 47%, rgb(255, 204, 0) 98%);
+    font-family: "Fira", serif;
+    height: calc(100% - 1px);
+}
+
+form {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+select {
+    padding: 2px;
+    border-radius: 4px;
+    border: solid 1px black;
+}
+
+a:link {
+    color: #00ffe9;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #e289ff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff8484;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ffff78;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: #F0D6A3;
+    border: solid 1px black;
+    border-radius: 4px;
+    color: black;
+    text-decoration: none;
+    padding: 2px 6px;
+    cursor: pointer;
+}
+
+input[type=text] {
+    padding: 2px;
+    width: fit-content;
+    background-color: #d7d7d7;
+    border: solid 1px black;
+    border-radius: 2px;
+}
+
+input.invalid {
+    border-color: #900;
+    background-color: #fdd;
+}
+
+input:focus.invalid {
+    outline: none;
+}
+
+p {
+    margin: 0.5em;
+}
+
+table {
+    border: solid 2px black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: solid 1px black;
+    padding: 3px;
+}
+
+.margin {
+    margin: 2px;
+}
+
+.error {
+    width: 100%;
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    overflow: auto;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+
+.error.active {
+    padding: 0.3em;
+    margin: 1px 0 0 0;
+}
+
+.select-container {
+    margin-left: 0.5em;
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 4px;
+    justify-content: space-between;
+}
+
+.select-input-container {
+    width: min-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.round-container {
+    border: solid 2px black;
+    border-radius: 4px;
+}
+
+.blurred-container {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    padding: 5px;
+    box-shadow: 0 -20px 100px black;
+    overflow: auto;
+    font-family: monospace;
+    color: #2f2f2f;
+    font-size: 16px;
+    height: fit-content;
+    background-color: rgba(255, 235, 205, 0.2);
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    overflow: auto;
+    align-content: flex-start;
+}
+
+#choose {
+    float: left;
+    width: fit-content;
+    background-color: #d5d5d570;
+    height: fit-content;
+}
+
+#submit-container {
+    padding: 0 4px;
+    display: flex;
+    justify-content: right;
+}
+
+#graph-container {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+}
+
+#graph {
+    padding: 2px;
+}
+
+#result-table-container {
+    padding: 2px;
+    width: fit-content;
+    height: fit-content;
+    float: right;
+    clear: both;
+    margin-top: 10px;
+}
+
+#y {
+    padding-left: 12px;
+}
+
+/* Добавленные стили с использованием различных селекторов и свойств */
+#header p {
+    font-weight: bold;
+}
+
+#choose label {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#choose .select-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#submit-container #submit-button {
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+#result-table th,
+#result-table td {
+    text-align: center;
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <title>First Lab</title>
+    <link rel="icon" href="" type="image/png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="container" class="margin">
+    <div id="header" class="blured-container round-container margin">
+        <p>Web 1</p>
+        <p>Одинцов Максим, группа P3225</p>
+        <p>Вариант 3516</p>
+    </div>
+    <div id="main" class="margin">
+        <div id="choose" class="blured-container round-container margin">
+            <p>Введите значения:</p>
+            <p>Каждое поле должно быть заполнено</p>
+            <form action="actions/check-hit.php" method="post">
+                <div id="x-select-container" class="select-container margin">
+                    <label for="x-select">Введите X:</label>
+                    <div id="x-select-input" class="select-input-container">
+                        <input type="text" name="x-select" id="x-select" class="input-select"
+                               placeholder="В диапазоне [-3; 5]" required />
+                        <span class="error" aria-live="polite"></span>
+                    </div>
+                </div>
+                <label id="y">Выберите Y:</label><br>
+                <div id="y-select-container" class="select-container margin">
+                    <input type="checkbox" name="y-select"  value="-2" >-2<br>
+                    <input type="checkbox" name="y-select" value="-1.5" >-1.5<br>
+                    <input type="checkbox"  name="y-select" value="-1"  >-1<br>
+                    <input type="checkbox"  name="y-select" value="-0.5"  >-0.5<br>
+                    <input type="checkbox"  name="y-select" value="0"  >0<br>
+                    <input type="checkbox"   name="y-select" value="0.5"  >0.5<br>
+                    <input type="checkbox"   name="y-select" value="1"  >1<br>
+                    <input type="checkbox"  name="y-select" value="1.5"  >1.5<br>
+                    <input type="checkbox"  name="y-select" value="2"  >2<br>
+                </div>
+                <div id="r-select-container" class="select-container margin">
+                    <label for="r-select">Введите R:</label>
+                    <div id="r-select-input" class="select-input-container">
+                        <input type="text" name="r-select" id="r-select" class="input-select"
+                               placeholder="В диапазоне [1; 4]" required />
+                        <span class="error" aria-live="polite"></span>
+                    </div>
+                </div>
+                <div id="submit-container" class="margin">
+                    <input type="submit" id="submit-button" value="Подтвердить">
+                </div>
+            </form>
+        </div>
+        <div id="graph-container" class="blured-container round-container margin">
+            <canvas id="graph" width="500px" height="500px"></canvas>
+        </div>
+        <div id="result-table-container" class="blured-container margin">
+            <table id="result-table">
+                <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Результат</th>
+                    <th>Текущее время</th>
+                    <th>Выполнено за, мс</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+
+</div>
+<script src="scripts/validation.js"></script>
+<script src="scripts/post-data.js"></script>
+<script src="scripts/add-to-table.js"></script>
+<script src="scripts/graph.js"></script>
+<script src="scripts/fix-placeholder.js"></script>
+</body>
+</html>
